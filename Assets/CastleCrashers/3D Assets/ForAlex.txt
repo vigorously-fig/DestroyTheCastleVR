@@ -1,0 +1,5 @@
+Hey Alex!
+
+Just remember, use the Prefabs folder for the assets while putting them in the environment! :D
+
+If you want to look at all the assets before putting them down, each pack has a demo scene you can load up.
