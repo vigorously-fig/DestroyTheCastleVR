@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2378010400139859068}
   - component: {fileID: 1904055197310910872}
   - component: {fileID: 8169996936118238787}
-  - component: {fileID: 116494272385346219}
+  - component: {fileID: 6234757645289319475}
   m_Layer: 0
   m_Name: Plank.001
   m_TagString: Untagged
@@ -133,7 +133,7 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
   audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
   health: 100
---- !u!65 &116494272385346219
+--- !u!65 &6234757645289319475
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1763652095676936696}
   m_Layer: 0
-  m_Name: CornerWall
+  m_Name: CornerWall_S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,7 +179,7 @@ Transform:
   m_GameObject: {fileID: 50613423167097838}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.1631117, y: 0.000000008742278, z: 13.13}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 676882053535596298}
   - component: {fileID: 3108122024478852546}
   - component: {fileID: 5374045198797053835}
-  - component: {fileID: 1858972213431589279}
+  - component: {fileID: 7724386612588985689}
   m_Layer: 0
   m_Name: Plank.003
   m_TagString: Untagged
@@ -331,7 +331,7 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
   audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
   health: 100
---- !u!65 &1858972213431589279
+--- !u!65 &7724386612588985689
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -363,9 +363,10 @@ GameObject:
   - component: {fileID: 3601240528981795251}
   - component: {fileID: 5174504006093260574}
   - component: {fileID: 3816101317450039929}
-  - component: {fileID: 5100672254691359508}
   - component: {fileID: 4099328994415702575}
   - component: {fileID: 6813515652644086204}
+  - component: {fileID: 6939282510047220913}
+  - component: {fileID: 6322215648366881244}
   m_Layer: 0
   m_Name: Wall.003
   m_TagString: Untagged
@@ -438,28 +439,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5100672254691359508
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852173295419554463}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6503316152310639137, guid: b0e9c9f557c2d1644a9a32456f7e88fd, type: 3}
 --- !u!54 &4099328994415702575
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -507,6 +486,48 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
   audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
   health: 100
+--- !u!65 &6939282510047220913
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852173295419554463}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.6975883, y: 0.51472044, z: 0.086159945}
+  m_Center: {x: -0.15717357, y: 0.30736035, z: 0.13967669}
+--- !u!65 &6322215648366881244
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852173295419554463}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.086093664, y: 0.51472044, z: 0.59080553}
+  m_Center: {x: 0.14857376, y: 0.30736035, z: -0.19839787}
 --- !u!1 &1156950605257283812
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,7 +541,7 @@ GameObject:
   - component: {fileID: 6430699905624707411}
   - component: {fileID: 5754536667959252157}
   - component: {fileID: 4512595003723223313}
-  - component: {fileID: 3515595867870999109}
+  - component: {fileID: 2899128624341053284}
   m_Layer: 0
   m_Name: Plank.004
   m_TagString: Untagged
@@ -640,7 +661,7 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
   audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
   health: 100
---- !u!65 &3515595867870999109
+--- !u!65 &2899128624341053284
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -672,9 +693,10 @@ GameObject:
   - component: {fileID: 3254662862308831858}
   - component: {fileID: 5229712721706883250}
   - component: {fileID: 7236103916434665905}
-  - component: {fileID: 4413803725307846536}
   - component: {fileID: 7630682588961828566}
   - component: {fileID: 1040695993264487524}
+  - component: {fileID: 781189696369499327}
+  - component: {fileID: 7287525374101971408}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -747,28 +769,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4413803725307846536
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2643313416786964197}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1149973307703454695, guid: b0e9c9f557c2d1644a9a32456f7e88fd, type: 3}
 --- !u!54 &7630682588961828566
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -816,6 +816,48 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
   audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
   health: 100
+--- !u!65 &781189696369499327
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2643313416786964197}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7299526, y: 0.05000003, z: 0.4259779}
+  m_Center: {x: -0.14035285, y: 0.025000008, z: -0.012988955}
+--- !u!65 &7287525374101971408
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2643313416786964197}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.42602944, y: 0.05000003, z: 0.2778852}
+  m_Center: {x: 0.01160872, y: 0.025000008, z: -0.3661784}
 --- !u!1 &2879869556120196605
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,7 +871,7 @@ GameObject:
   - component: {fileID: 7823574718238828070}
   - component: {fileID: 8632135493047546551}
   - component: {fileID: 5319629455507337744}
-  - component: {fileID: 1998574884529620433}
+  - component: {fileID: 5389144239234437126}
   m_Layer: 0
   m_Name: Wall.002
   m_TagString: Untagged
@@ -949,7 +991,7 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
   audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
   health: 100
---- !u!65 &1998574884529620433
+--- !u!65 &5389144239234437126
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -981,9 +1023,10 @@ GameObject:
   - component: {fileID: 2177923792603530521}
   - component: {fileID: 616657991885528150}
   - component: {fileID: 8684289790156304393}
-  - component: {fileID: 8851877954227949496}
   - component: {fileID: 9140091235615524455}
   - component: {fileID: 5360946802396028365}
+  - component: {fileID: 8771750355478232285}
+  - component: {fileID: 8796067103732134084}
   m_Layer: 0
   m_Name: Wall.001
   m_TagString: Untagged
@@ -1056,28 +1099,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8851877954227949496
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3574165960469708986}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6206450301262281439, guid: b0e9c9f557c2d1644a9a32456f7e88fd, type: 3}
 --- !u!54 &9140091235615524455
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1125,6 +1146,48 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
   audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
   health: 100
+--- !u!65 &8771750355478232285
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3574165960469708986}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.40817094, y: 0.51472044, z: 0.09062028}
+  m_Center: {x: -0.29712385, y: 0.30736023, z: -0.14628112}
+--- !u!65 &8796067103732134084
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3574165960469708986}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.08835524, y: 0.51472044, z: 0.30531973}
+  m_Center: {x: -0.137216, y: 0.30736023, z: -0.3446984}
 --- !u!1 &3883534829133094597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,7 +1201,7 @@ GameObject:
   - component: {fileID: 4007276189549898412}
   - component: {fileID: 2746040611726978758}
   - component: {fileID: 6562197963381263746}
-  - component: {fileID: 6950939930679814586}
+  - component: {fileID: 5584513468557693616}
   m_Layer: 0
   m_Name: Wall.006
   m_TagString: Untagged
@@ -1258,7 +1321,7 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
   audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
   health: 100
---- !u!65 &6950939930679814586
+--- !u!65 &5584513468557693616
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1292,7 +1355,7 @@ GameObject:
   - component: {fileID: 1048873449855239725}
   - component: {fileID: 6547974214618800643}
   - component: {fileID: 6536773198109631968}
-  - component: {fileID: 2243856070833260289}
+  - component: {fileID: 4978619721178452698}
   m_Layer: 0
   m_Name: Plank.002
   m_TagString: Untagged
@@ -1412,7 +1475,7 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
   audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
   health: 100
---- !u!65 &2243856070833260289
+--- !u!65 &4978619721178452698
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1446,7 +1509,7 @@ GameObject:
   - component: {fileID: 3378054862874993126}
   - component: {fileID: 116547702307332224}
   - component: {fileID: 8937073823765152620}
-  - component: {fileID: 6452437580039015976}
+  - component: {fileID: 5797677876122643930}
   m_Layer: 0
   m_Name: Wall.005
   m_TagString: Untagged
@@ -1566,7 +1629,7 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
   audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
   health: 100
---- !u!65 &6452437580039015976
+--- !u!65 &5797677876122643930
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1600,7 +1663,7 @@ GameObject:
   - component: {fileID: 6417281959797363797}
   - component: {fileID: 8919618593316234954}
   - component: {fileID: 8776456101439071101}
-  - component: {fileID: 1828510283972461326}
+  - component: {fileID: 2345498870754454855}
   m_Layer: 0
   m_Name: Plank.006
   m_TagString: Untagged
@@ -1720,7 +1783,7 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
   audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
   health: 100
---- !u!65 &1828510283972461326
+--- !u!65 &2345498870754454855
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1754,7 +1817,7 @@ GameObject:
   - component: {fileID: 5601374109824731296}
   - component: {fileID: 5126315500056968645}
   - component: {fileID: 7949451013495928355}
-  - component: {fileID: 9044867825567586242}
+  - component: {fileID: 2976030101206788265}
   m_Layer: 0
   m_Name: Wall.004
   m_TagString: Untagged
@@ -1874,7 +1937,7 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
   audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
   health: 100
---- !u!65 &9044867825567586242
+--- !u!65 &2976030101206788265
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1908,7 +1971,7 @@ GameObject:
   - component: {fileID: 4700357621515581231}
   - component: {fileID: 3152120078010653653}
   - component: {fileID: 5416962931728855869}
-  - component: {fileID: 4459315653123518112}
+  - component: {fileID: 998556982038916890}
   m_Layer: 0
   m_Name: Plank.005
   m_TagString: Untagged
@@ -2028,7 +2091,7 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
   audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
   health: 100
---- !u!65 &4459315653123518112
+--- !u!65 &998556982038916890
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

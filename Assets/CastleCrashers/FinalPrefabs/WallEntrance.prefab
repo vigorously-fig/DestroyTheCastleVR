@@ -9,6 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1697228219256384138}
+  - component: {fileID: 2532835873401654193}
+  - component: {fileID: 1216508207077629490}
+  - component: {fileID: 5692213020166722399}
   m_Layer: 0
   m_Name: WallEntrance
   m_TagString: Untagged
@@ -25,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2890932220101384311}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.9409933, y: 0.004494812, z: 6.039722}
+  m_LocalPosition: {x: 0, y: 0.004494812, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -33,6 +36,75 @@ Transform:
   - {fileID: 7290438975554995849}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &2532835873401654193
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890932220101384311}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8733429697405204941, guid: 0499ddce1e98b4b469a8917f5799c5aa, type: 3}
+--- !u!54 &1216508207077629490
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890932220101384311}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &5692213020166722399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890932220101384311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19fb10f58bd464548af8b5ddba7aa15d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakParticles: {fileID: 1938811096945370079, guid: a2a6960f7992d4ba58944020505fc0af, type: 3}
+  damageParticles: {fileID: 1938811096945370079, guid: b6a1e6fab017e4ce693c6e45c57ab61f, type: 3}
+  fireParticles: {fileID: 4640031398443823038, guid: d7934e093f4cf45c495f43df6ab43475, type: 3}
+  breakSound: {fileID: 8300000, guid: edf3f82b1799d41e9a521333b539963b, type: 3}
+  damageSound: {fileID: 8300000, guid: e8fb02f1e10d247589c077a7dd3e447d, type: 3}
+  fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
+  audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
+  health: 100
 --- !u!1 &6072164957651457245
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,9 +116,6 @@ GameObject:
   - component: {fileID: 7290438975554995849}
   - component: {fileID: 4856353128293391101}
   - component: {fileID: 2908041354786488760}
-  - component: {fileID: 172765666944218358}
-  - component: {fileID: 2035332229225565662}
-  - component: {fileID: 6225836804713931752}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -121,75 +190,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &172765666944218358
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6072164957651457245}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8733429697405204941, guid: 0499ddce1e98b4b469a8917f5799c5aa, type: 3}
---- !u!54 &2035332229225565662
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6072164957651457245}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &6225836804713931752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6072164957651457245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19fb10f58bd464548af8b5ddba7aa15d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  breakParticles: {fileID: 1938811096945370079, guid: a2a6960f7992d4ba58944020505fc0af, type: 3}
-  damageParticles: {fileID: 1938811096945370079, guid: b6a1e6fab017e4ce693c6e45c57ab61f, type: 3}
-  fireParticles: {fileID: 4640031398443823038, guid: d7934e093f4cf45c495f43df6ab43475, type: 3}
-  breakSound: {fileID: 8300000, guid: edf3f82b1799d41e9a521333b539963b, type: 3}
-  damageSound: {fileID: 8300000, guid: e8fb02f1e10d247589c077a7dd3e447d, type: 3}
-  fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
-  audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
-  health: 100
 --- !u!1 &7706909233929130068
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,9 +201,6 @@ GameObject:
   - component: {fileID: 9066583339139846984}
   - component: {fileID: 6832563375036336910}
   - component: {fileID: 42345668106424288}
-  - component: {fileID: 7421612623574732918}
-  - component: {fileID: 3140756549964038764}
-  - component: {fileID: 437598890374668491}
   m_Layer: 0
   m_Name: FrontGate
   m_TagString: Untagged
@@ -276,72 +273,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7421612623574732918
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706909233929130068}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1481614498166832014, guid: 0499ddce1e98b4b469a8917f5799c5aa, type: 3}
---- !u!54 &3140756549964038764
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706909233929130068}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &437598890374668491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706909233929130068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19fb10f58bd464548af8b5ddba7aa15d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  breakParticles: {fileID: 1938811096945370079, guid: a2a6960f7992d4ba58944020505fc0af, type: 3}
-  damageParticles: {fileID: 1938811096945370079, guid: b6a1e6fab017e4ce693c6e45c57ab61f, type: 3}
-  fireParticles: {fileID: 4640031398443823038, guid: d7934e093f4cf45c495f43df6ab43475, type: 3}
-  breakSound: {fileID: 8300000, guid: edf3f82b1799d41e9a521333b539963b, type: 3}
-  damageSound: {fileID: 8300000, guid: e8fb02f1e10d247589c077a7dd3e447d, type: 3}
-  fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
-  audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
-  health: 100
