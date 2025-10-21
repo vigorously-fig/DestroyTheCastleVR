@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: 7409285009236211715}
   - component: {fileID: 4926108566155029514}
   m_Layer: 0
-  m_Name: SRB_Wall
+  m_Name: SRB_Wall_S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
