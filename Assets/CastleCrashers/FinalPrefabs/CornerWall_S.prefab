@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1763652095676936696}
   m_Layer: 0
-  m_Name: CornerWall
+  m_Name: CornerWall_S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
