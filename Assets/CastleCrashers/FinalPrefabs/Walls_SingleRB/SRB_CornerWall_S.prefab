@@ -1093,7 +1093,7 @@ GameObject:
   - component: {fileID: 6235588409674790210}
   - component: {fileID: 7066899769429282986}
   m_Layer: 0
-  m_Name: SRB_CornerWall
+  m_Name: SRB_CornerWall_S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
