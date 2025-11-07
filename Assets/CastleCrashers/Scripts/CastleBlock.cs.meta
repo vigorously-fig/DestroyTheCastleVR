@@ -4,12 +4,13 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
+  - damageText: {instanceID: 0}
   - breakParticles: {fileID: 1938811096945370079, guid: a2a6960f7992d4ba58944020505fc0af, type: 3}
   - damageParticles: {fileID: 1938811096945370079, guid: b6a1e6fab017e4ce693c6e45c57ab61f, type: 3}
   - fireParticles: {fileID: 4640031398443823038, guid: d7934e093f4cf45c495f43df6ab43475, type: 3}
-  - breakSound: {fileID: 8300000, guid: edf3f82b1799d41e9a521333b539963b, type: 3}
-  - damageSound: {fileID: 8300000, guid: e8fb02f1e10d247589c077a7dd3e447d, type: 3}
-  - fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
+  - breakSound: {fileID: 8300000, guid: 7fcc0f7d18cdbb8469fd84d59af9cef0, type: 3}
+  - damageSound: {fileID: 8300000, guid: 1827957258787754c86b24a70017c232, type: 3}
+  - fireSound: {fileID: 8300000, guid: 9c8fd579a7f94954ba0c496c24b0a08c, type: 3}
   - audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
