@@ -29,7 +29,7 @@ public class Cannon : MonoBehaviour, ITriggerable
         if (shouldFire)
         {
             GameObject spawnedCannonball = Instantiate(cannonballPrefab, transform.position + transform.right*-2 + transform.forward*1, transform.rotation);
-            spawnedCannonball.GetComponent<Rigidbody>().AddForce((transform.right*-2 + transform.forward*1) * cannonballForce);
+            spawnedCannonball.GetComponent<Rigidbody>().AddForce((transform.right*-2 + transform.forward*0.5f) * cannonballForce);
 
             playFX();
 

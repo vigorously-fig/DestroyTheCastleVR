@@ -13,7 +13,7 @@ public class LeverScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(transform.eulerAngles.x);
+        //Debug.Log(transform.eulerAngles.x);
         if (10 < transform.eulerAngles.x && transform.eulerAngles.x <= 310)
         {
             //Debug.Log("HIIII");
