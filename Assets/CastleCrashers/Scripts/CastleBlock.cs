@@ -43,20 +43,20 @@ public class CastleBlock : MonoBehaviour, IDamageable
         spawnedSound.loop = true;
 
         // Register this block with the GameManager
-        GameManager.Instance.RegisterCastleBlock(this);
+        //GameManager.Instance.RegisterCastleBlock(this);
     }
 
     public void Damage(int damageValue, bool isFireDamage)
     {
         if (isDead) return;
 
-        GameManager.Instance.CheckForCelebration(damageValue, transform.position);
-        GameManager.Instance.RegisterHitForCombo(damageValue, transform.position);
+        //GameManager.Instance.CheckForCelebration(damageValue, transform.position);
+        //GameManager.Instance.RegisterHitForCombo(damageValue, transform.position);
 
         subtractHealth(damageValue);
 
         // Tell the GameManager the castle has been hit (triggers panic music if not already)
-        GameManager.Instance.CastleUnderAttack();
+        //GameManager.Instance.CastleUnderAttack();
 
         if (isFireDamage && !isOnFire)
         {
@@ -79,8 +79,8 @@ public class CastleBlock : MonoBehaviour, IDamageable
     {
         health = Mathf.Clamp(health - damageValue, 0, 100);
 
-        DamagePopup popup = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamagePopup>();
-        popup.SetDamageText(damageValue);
+        //DamagePopup popup = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamagePopup>();
+        //popup.SetDamageText(damageValue);
 
         Debug.Log("Health: " + health);
     }
@@ -96,7 +96,7 @@ public class CastleBlock : MonoBehaviour, IDamageable
 
             //SoundManager.Instance.PlaySoundFXClip(breakSound, transform, breakVolume);
 
-            GameManager.Instance.UnregisterCastleBlock(this);
+            //GameManager.Instance.UnregisterCastleBlock(this);
             Destroy(gameObject);
         }
     }

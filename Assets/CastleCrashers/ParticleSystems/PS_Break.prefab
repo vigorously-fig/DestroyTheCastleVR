@@ -53,8 +53,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4452194423772545791, guid: 555435a06727f9649be77f727e6870c7, type: 3}
+      propertyPath: stopAction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452194423772545791, guid: 555435a06727f9649be77f727e6870c7, type: 3}
       propertyPath: lengthInSec
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452194423772545791, guid: 555435a06727f9649be77f727e6870c7, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4452194423772545791, guid: 555435a06727f9649be77f727e6870c7, type: 3}
       propertyPath: ColorModule.enabled
@@ -110,7 +118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5187452825918039534, guid: 555435a06727f9649be77f727e6870c7, type: 3}
       propertyPath: m_Name
-      value: BreakParticles_1 Variant
+      value: PS_Break
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
