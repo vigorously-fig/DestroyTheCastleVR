@@ -8,6 +8,7 @@ public class Cannon : MonoBehaviour, ITriggerable
 
     AudioSource audioSource;
     [SerializeField] ParticleSystem particles;
+    Animator cannonAnimator;
 
     private float cannonballForce = 1000f;
     private float cooldownDelay = 3f;
@@ -21,6 +22,7 @@ public class Cannon : MonoBehaviour, ITriggerable
     public void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
+        cannonAnimator = gameObject.GetComponent<Animator>();
     }
 
     public void Trigger()
@@ -42,11 +44,19 @@ public class Cannon : MonoBehaviour, ITriggerable
         audioSource.pitch = Random.Range(explosionSoundPitchMin, explosionSoundPitchMax);
         audioSource.Play();
         particles.Play();
+        StartCoroutine("playShoot");
     }
 
     IEnumerator doCooldown()
     {
         yield return new WaitForSeconds(cooldownDelay);
         shouldFire = true;
+    }
+
+    IEnumerator playShoot()
+    {
+        cannonAnimator.SetBool("PlayShoot", true);
+        yield return new WaitForSeconds(0.1f);
+        cannonAnimator.SetBool("PlayShoot", false);
     }
 }
