@@ -7,7 +7,7 @@ public class Cannon : MonoBehaviour, ITriggerable
     [SerializeField] private GameObject cannonballPrefab;
 
     AudioSource audioSource;
-    ParticleSystem particles;
+    [SerializeField] ParticleSystem particles;
 
     private float cannonballForce = 1000f;
     private float cooldownDelay = 3f;
@@ -21,7 +21,6 @@ public class Cannon : MonoBehaviour, ITriggerable
     public void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
-        //particles = gameObject.GetComponent<ParticleSystem>();
     }
 
     public void Trigger()
@@ -42,6 +41,7 @@ public class Cannon : MonoBehaviour, ITriggerable
     {
         audioSource.pitch = Random.Range(explosionSoundPitchMin, explosionSoundPitchMax);
         audioSource.Play();
+        particles.Play();
     }
 
     IEnumerator doCooldown()
