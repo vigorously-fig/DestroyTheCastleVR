@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class LeverScript : MonoBehaviour
 {
-    GameObject cannon;
-
-    private void Start()
-    {
-        cannon = gameObject.transform.parent.gameObject;
-    }
+    [SerializeField] GameObject cannon;
 
     private void FixedUpdate()
     {
