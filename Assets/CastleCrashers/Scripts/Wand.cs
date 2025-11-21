@@ -32,12 +32,14 @@ public class Wand : MonoBehaviour, ITriggerable
     {
         if (!shouldCast) return;
 
+        // spawn at shoot point
         GameObject spawnedMagic = Instantiate(
             fireballPrefab,
-            transform.position + (transform.right * -1) + transform.forward,
-            transform.rotation
+            shootPoint.position,
+            shootPoint.rotation
         );
 
+        // push forward
         Rigidbody rb = spawnedMagic.GetComponent<Rigidbody>();
         rb.AddForce(shootPoint.forward * wandForce, ForceMode.Impulse);
 
@@ -46,6 +48,7 @@ public class Wand : MonoBehaviour, ITriggerable
         shouldCast = false;
         cooldownTimer = StartCoroutine(Cooldown());
     }
+
 
     private void PlayFX()
     {
