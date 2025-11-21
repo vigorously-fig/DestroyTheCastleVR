@@ -21,7 +21,7 @@ public class Cannonball : MonoBehaviour
 
     IEnumerator killYOURSELF()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(7f);
         Destroy(gameObject);
     }
 }
