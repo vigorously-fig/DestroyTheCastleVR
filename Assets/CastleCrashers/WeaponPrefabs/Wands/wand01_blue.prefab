@@ -285,10 +285,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a38e5e64e7637141bfb50fdd20453a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireballPrefab: {fileID: 0}
+  fireballPrefab: {fileID: 7913671014868918827, guid: 83d3843a72204c841857d5abfbcdfb81, type: 3}
   wandSoundEffect: {fileID: 8300000, guid: edf3f82b1799d41e9a521333b539963b, type: 3}
   particles: {fileID: 2404516855654967913}
-  wandForce: 500
+  wandForce: 50
   cooldownDelay: 1.5
   shootPoint: {fileID: 7483925847289951335}
 --- !u!82 &2214174993277928765
