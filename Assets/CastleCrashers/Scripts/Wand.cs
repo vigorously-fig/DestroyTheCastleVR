@@ -6,62 +6,60 @@ public class Wand : MonoBehaviour, ITriggerable
 {
     [SerializeField] private GameObject fireballPrefab;
 
-    //Sound and Visual effects
-    AudioSource audioSource;
-    private AudioClip wandSoundEffect;
-    [SerializeField] ParticleSystem particles;
+    //Sound + VFX
+    private AudioSource audioSource;
 
+    [SerializeField] private AudioClip wandSoundEffect;   // <-- FIXED
+    [SerializeField] private ParticleSystem particles;
 
-    //Make the wands have different power levels
+    //Wand settings
     [SerializeField] public float wandForce = 500f;
-    [SerializeField] public float cooldownDelay = 1.5f; //half of cannon cooldown
-    [SerializeField] Coroutine cooldownTimer;
+    [SerializeField] public float cooldownDelay = 1.5f;
+    private Coroutine cooldownTimer;
+    [SerializeField] private Transform shootPoint;
 
-    private float wandSoundPitchMin = 0.8f; //higher pitch range since tiny
+    private float wandSoundPitchMin = 0.8f;
     private float wandSoundPitchMax = 1.5f;
 
     private bool shouldCast = true;
 
-    // Start is called before the first frame update
     void Start()
     {
-       audioSource = gameObject.GetComponent<AudioSource>();
-       //wandAnimator = gameObject.GetComponent<Animator>(); (do we want a wand animation? What would it do?)
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void Trigger()
     {
-        if (shouldCast)
-        {
-            GameObject spawnedMagic = Instantiate(fireballPrefab, transform.position + transform.right * -1 + transform.forward * 1, transform.rotation);
-            spawnedMagic.GetComponent<Rigidbody>().AddForce((transform.right * -1 + transform.forward * 0.5f) * wandForce);
+        if (!shouldCast) return;
 
-            playFX();
+        GameObject spawnedMagic = Instantiate(
+            fireballPrefab,
+            transform.position + (transform.right * -1) + transform.forward,
+            transform.rotation
+        );
 
-            shouldCast = false;
-            cooldownTimer = StartCoroutine("doCooldown");
-        }
+        Rigidbody rb = spawnedMagic.GetComponent<Rigidbody>();
+        rb.AddForce(shootPoint.forward * wandForce, ForceMode.Impulse);
+
+        PlayFX();
+
+        shouldCast = false;
+        cooldownTimer = StartCoroutine(Cooldown());
     }
 
-    public void playFX()
+    private void PlayFX()
     {
         audioSource.pitch = Random.Range(wandSoundPitchMin, wandSoundPitchMax);
-        audioSource.PlayOneShot(wandSoundEffect);
-        particles.Play();
-        
-        //No wand animation for now
+        audioSource.PlayOneShot(wandSoundEffect);   // <-- WILL NOW WORK
+
+        if (particles != null)
+            particles.Play();
     }
 
-    IEnumerator doCooldown()
+    IEnumerator Cooldown()
     {
         yield return new WaitForSeconds(cooldownDelay);
         shouldCast = true;
     }
-
-    /* IEnumerable playCast()
-    {
-        //No wand animation for now
-        yield return null;
-    }
-    */
 }
+
