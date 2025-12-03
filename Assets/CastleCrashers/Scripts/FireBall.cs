@@ -36,7 +36,7 @@ public class FireBall : MonoBehaviour
 
         if(burnEffectPrefab != null)
         {
-            Instantiate(burnEffectPrefab, collision.contacts[0].point, Quaternion.identity);
+            Instantiate(burnEffectPrefab, collision.contacts[0].point, Quaternion.identity, gameObject.transform);
         }
 
         // Start burn area on impact
