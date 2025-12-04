@@ -124,4 +124,3 @@ public class GameManager : MonoBehaviour
             fp.SetText(message);
     }
 }
-
