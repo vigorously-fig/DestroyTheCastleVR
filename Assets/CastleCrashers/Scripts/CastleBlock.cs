@@ -92,7 +92,7 @@ public class CastleBlock : MonoBehaviour, IDamageable
             spawnedBreakParticles.Play();
 
             // Tell GameManager this block was destroyed
-            GameManager.Instance.OnBlockDestroyed();
+            //GameManager.Instance.OnBlockDestroyed();
 
             Destroy(gameObject);
         }

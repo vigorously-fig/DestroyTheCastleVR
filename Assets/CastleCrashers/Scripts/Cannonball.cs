@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cannonball : MonoBehaviour
 {
-    private int damage = 30;
+    private int damage = 50;
 
     private void Awake()
     {

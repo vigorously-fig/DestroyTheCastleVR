@@ -10,7 +10,7 @@ public class Cannon : MonoBehaviour, ITriggerable
     [SerializeField] ParticleSystem particles;
     Animator cannonAnimator;
 
-    private float cannonballForce = 1000f;
+    private float cannonballForce = 1000f * 7f;
     private float cooldownDelay = 3f;
     Coroutine cooldownTimer;
 

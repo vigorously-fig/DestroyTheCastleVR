@@ -31,7 +31,7 @@ public class FireBall : MonoBehaviour
         IDamageable target = collision.gameObject.GetComponent<IDamageable>();
         if (target != null)
         {
-            target.Damage(damage, true);
+            target.Damage(damage, false);
         }
 
         if(burnEffectPrefab != null)
