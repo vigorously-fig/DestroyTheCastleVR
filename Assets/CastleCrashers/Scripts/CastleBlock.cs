@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CastleBlock : MonoBehaviour, IDamageable
 {
-    //public GameObject damageText;
+    public GameObject damageText;
 
     [SerializeField] ParticleSystem breakParticles;
     [SerializeField] ParticleSystem damageParticles;
@@ -42,22 +42,21 @@ public class CastleBlock : MonoBehaviour, IDamageable
         spawnedSound.clip = fireSound;
         spawnedSound.loop = true;
 
-    }
-
-    public void Start()
-    {
-        // Register block with GameManager
-        GameManager.Instance.RegisterCastleBlock(this);
+        // Register this block with the GameManager
+        //GameManager.Instance.RegisterCastleBlock(this);
     }
 
     public void Damage(int damageValue, bool isFireDamage)
     {
         if (isDead) return;
 
-        // Add score for this damage
-        GameManager.Instance.AddScore(damageValue);
+        //GameManager.Instance.CheckForCelebration(damageValue, transform.position);
+        //GameManager.Instance.RegisterHitForCombo(damageValue, transform.position);
 
         subtractHealth(damageValue);
+
+        // Tell the GameManager the castle has been hit (triggers panic music if not already)
+        //GameManager.Instance.CastleUnderAttack();
 
         if (isFireDamage && !isOnFire)
         {
@@ -79,6 +78,10 @@ public class CastleBlock : MonoBehaviour, IDamageable
     void subtractHealth(int damageValue)
     {
         health = Mathf.Clamp(health - damageValue, 0, 100);
+
+        //DamagePopup popup = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamagePopup>();
+        //popup.SetDamageText(damageValue);
+
         Debug.Log("Health: " + health);
     }
 
@@ -91,9 +94,9 @@ public class CastleBlock : MonoBehaviour, IDamageable
             ParticleSystem spawnedBreakParticles = Instantiate(breakParticles, transform.position, transform.rotation);
             spawnedBreakParticles.Play();
 
-            // Tell GameManager this block was destroyed
-            GameManager.Instance.OnBlockDestroyed();
+            //SoundManager.Instance.PlaySoundFXClip(breakSound, transform, breakVolume);
 
+            //GameManager.Instance.UnregisterCastleBlock(this);
             Destroy(gameObject);
         }
     }
@@ -102,14 +105,13 @@ public class CastleBlock : MonoBehaviour, IDamageable
     {
         while (!isDead)
         {
-            GameManager.Instance.AddScore(fireDamage);
             subtractHealth(fireDamage);
             checkIfDead();
             yield return new WaitForSeconds(fireDamageRate);
         }
 
+        // Stop fire when block is destroyed
         spawnedFireParticles.Stop();
         spawnedSound.Stop();
     }
 }
-
