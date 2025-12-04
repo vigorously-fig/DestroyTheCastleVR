@@ -1208,11 +1208,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19fb10f58bd464548af8b5ddba7aa15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakParticles: {fileID: 1938811096945370079, guid: a2a6960f7992d4ba58944020505fc0af, type: 3}
-  damageParticles: {fileID: 1938811096945370079, guid: b6a1e6fab017e4ce693c6e45c57ab61f, type: 3}
-  fireParticles: {fileID: 4640031398443823038, guid: d7934e093f4cf45c495f43df6ab43475, type: 3}
-  breakSound: {fileID: 8300000, guid: edf3f82b1799d41e9a521333b539963b, type: 3}
-  damageSound: {fileID: 8300000, guid: e8fb02f1e10d247589c077a7dd3e447d, type: 3}
-  fireSound: {fileID: 8300000, guid: a166dec5f13c54f66a1878a2549d4db0, type: 3}
-  audioSource: {fileID: 1406100348241583147, guid: ee5dade9012ea42aebf13f1314c8def1, type: 3}
+  breakParticles: {fileID: 1644128136225868240, guid: 00b6623468c92ee43a55f615db2945f2, type: 3}
+  damageParticles: {fileID: 4452194423772545791, guid: 555435a06727f9649be77f727e6870c7, type: 3}
+  fireParticles: {fileID: 5361964777947053436, guid: ec9fd07c4544e2244af706a30516391a, type: 3}
+  breakSound: {fileID: 8300000, guid: d9d73034e2afeae4c8d33174c5e8dbe3, type: 3}
+  damageSound: {fileID: 8300000, guid: 5bd02abb85c15fc489e9720046eeb7ac, type: 3}
+  fireSound: {fileID: 8300000, guid: 47948e37b187a674cbdd7bc201269182, type: 3}
+  audioSource: {fileID: 1406100348241583147, guid: 7c4b6ff290a6c5b4aa0466461eee2a73, type: 3}
   health: 100
