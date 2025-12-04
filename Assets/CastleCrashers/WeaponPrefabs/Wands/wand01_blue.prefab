@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireballPrefab: {fileID: 7913671014868918827, guid: 83d3843a72204c841857d5abfbcdfb81, type: 3}
-  wandSoundEffect: {fileID: 8300000, guid: edf3f82b1799d41e9a521333b539963b, type: 3}
+  wandSoundEffect: {fileID: 8300000, guid: a933cdab7fca4c3429310ef1f455c4b0, type: 3}
   particles: {fileID: 2404516855654967913}
   wandForce: 50
   cooldownDelay: 1.5
