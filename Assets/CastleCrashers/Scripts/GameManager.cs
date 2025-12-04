@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    [Header("UI")]
+    public VictoryPanel victoryUI;
+
     [Header("References")]
     public GameObject floatingPopupPrefab;
     public SoundManager soundManager;
@@ -17,7 +20,6 @@ public class GameManager : MonoBehaviour
     private int totalBlocks;
     private int destroyedBlocks = 0;
 
-    // === SCORE SYSTEM ===
     [Header("Score System")]
     public int currentScore = 0;
     public int highScore = 0;
@@ -29,10 +31,9 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-    
+
         Instance = this;
     }
-
 
     private void Start()
     {
@@ -45,18 +46,15 @@ public class GameManager : MonoBehaviour
         if (soundManager)
             soundManager.PlayParadeAmbience();
 
-        // Load saved highscore
         highScore = PlayerPrefs.GetInt("HighScore", 0);
     }
 
-    // === SCORE FUNCTION ===
     public void AddScore(int amount)
     {
         currentScore += amount;
         Debug.Log("Score: " + currentScore);
     }
 
-    // === REGISTER BLOCKS ===
     private List<CastleBlock> castleBlocks = new List<CastleBlock>();
 
     public void RegisterCastleBlock(CastleBlock block)
@@ -83,7 +81,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Called by CastleBlock when destroyed
     public void OnBlockDestroyed()
     {
         destroyedBlocks++;
@@ -94,13 +91,11 @@ public class GameManager : MonoBehaviour
             OnVictory();
     }
 
-    // === VICTORY ===
     private void OnVictory()
     {
         gameOver = true;
         completionTime = Time.time - startTime;
 
-        // Save new high score
         if (currentScore > highScore)
         {
             highScore = currentScore;
@@ -108,25 +103,31 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.Save();
         }
 
+        // Position floating popup 3 meters in front of player
+        Vector3 popupPos =
+            Camera.main.transform.position +
+            Camera.main.transform.forward * 3f +
+            Vector3.up * 1.5f;
+
         ShowFloatingPopup(
             $"<b><color=yellow>CASTLE DESTROYED!</color></b>\n" +
             $"Time: {completionTime:F1}s\n" +
             $"Score: {currentScore}\n" +
             $"High Score: {highScore}",
-            Camera.main.transform.position + Camera.main.transform.forward * 3f + Vector3.up * 1.5f
+            popupPos
         );
 
         soundManager.PlayVictoryMusic();
     }
 
-    // === POPUP ===
     public void ShowFloatingPopup(string message, Vector3 position)
     {
         if (floatingPopupPrefab == null) return;
+
         GameObject popup = Instantiate(floatingPopupPrefab, position, Quaternion.identity);
 
-        var fp = popup.GetComponent<FloatingPopupVR>();
-        if (fp != null)
-            fp.SetText(message);
+        var vp = popup.GetComponent<VictoryPopup>();
+        if (vp != null)
+            vp.SetText(message);
     }
 }
