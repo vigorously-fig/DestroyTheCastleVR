@@ -35,7 +35,7 @@ public class CastleBlock : MonoBehaviour, IDamageable
 
     private void Awake()
     {
-        spawnedFireParticles = Instantiate(fireParticles, transform.position, transform.rotation, transform);
+        spawnedFireParticles = Instantiate(fireParticles, transform.position + (transform.up*5), transform.rotation, transform);
         spawnedDamageParticles = Instantiate(damageParticles, transform.position, transform.rotation, transform);
 
         spawnedSound = Instantiate(audioSource, transform.position, transform.rotation, transform);
