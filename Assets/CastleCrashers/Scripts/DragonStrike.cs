@@ -21,7 +21,7 @@ public class DragonStrike : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
-
+/*
     public void AttemptStrike()
     {
         if (!GameManager.Instance.CanUseDragonStrike()) return;
@@ -30,7 +30,7 @@ public class DragonStrike : MonoBehaviour
 
         StartCoroutine(PerformStrike());
     }
-
+*/
     private IEnumerator PerformStrike()
     {
         lastStrikeTime = Time.time;
