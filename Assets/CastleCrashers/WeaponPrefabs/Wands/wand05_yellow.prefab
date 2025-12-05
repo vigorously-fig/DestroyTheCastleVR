@@ -288,13 +288,13 @@ MonoBehaviour:
   fireballPrefab: {fileID: 7913671014868918827, guid: 83d3843a72204c841857d5abfbcdfb81, type: 3}
   wandSoundEffect: {fileID: 8300000, guid: a933cdab7fca4c3429310ef1f455c4b0, type: 3}
   particles: {fileID: 2404516855654967913, guid: 14a1089dfc8b2f949937da50bf38bc90, type: 3}
-  wandForce: 70
-  cooldownDelay: 1.5
+  wandForce: 50
+  cooldownDelay: 0.5
   shootPoint: {fileID: 7483925847289951335, guid: 14a1089dfc8b2f949937da50bf38bc90, type: 3}
-  maxUses: 5
+  maxUses: 10
   autoRecharge: 0
-  rechargeDelay: 3
-  rechargeAmount: 5
+  rechargeDelay: 2
+  rechargeAmount: 10
 --- !u!82 &-3468711615013752043
 AudioSource:
   m_ObjectHideFlags: 0
@@ -415,13 +415,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6386253655465967164}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.08, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.000000026067909, y: -0.08000184, z: 0.000000007450581}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 408222}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &8079386763780490184
 GameObject:
   m_ObjectHideFlags: 0

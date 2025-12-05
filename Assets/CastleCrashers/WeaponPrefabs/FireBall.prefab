@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1a9e2c2ca2be144496cdd37a4b1ae16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
+  damage: 10
   burnEffectPrefab: {fileID: 2127420006430656241, guid: ec9fd07c4544e2244af706a30516391a, type: 3}
   burnLayerMask:
     serializedVersion: 2
