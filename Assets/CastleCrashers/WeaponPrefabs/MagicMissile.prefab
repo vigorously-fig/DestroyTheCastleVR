@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fe4165d7d0dbf2645b0e795d9bd283d4, type: 2}
+  - {fileID: 2100000, guid: eecb11203f3ece0418c7e692048836f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  burnEffectPrefab: {fileID: 2127420006430656241, guid: ec9fd07c4544e2244af706a30516391a, type: 3}
+  burnEffectPrefab: {fileID: 2127420006430656241, guid: 0264be81ff654bf4ba73154978f6b6d3, type: 3}
   burnLayerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -155,4 +155,4 @@ MonoBehaviour:
   burnTickDamage: 6
   burnTickRate: 0.3
   burnDuration: 4
-  burnForce: 50
+  burnForce: 60
