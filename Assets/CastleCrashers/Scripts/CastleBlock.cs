@@ -57,6 +57,9 @@ public class CastleBlock : MonoBehaviour, IDamageable
         // Add score for this damage
         GameManager.Instance.AddScore(damageValue);
 
+        //add screams sound
+        //SoundManager.Instance.PlayRandomVoiceLine();
+
         subtractHealth(damageValue);
 
         if (isFireDamage && !isOnFire)

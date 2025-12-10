@@ -39,21 +39,36 @@ public class SoundManager : MonoBehaviour
         crowdSource.Play();
     }
 
-    public void UpdateBattleIntensity(float destructionPercent)
+    bool chaosStarted = false;
+
+    public void TriggerChaosMode()
     {
-        if (destructionPercent > 0.25f && musicSource.clip != chaosMusic)
-        {
-            StartCoroutine(CrossfadeMusic(chaosMusic, 2f));
-            crowdSource.clip = crowdScream;
-            crowdSource.Play();
-        }
+        if (chaosStarted) return;
+        chaosStarted = true;
+
+        StartCoroutine(CrossfadeMusic(chaosMusic, 2f));
+
+        crowdSource.clip = crowdScream;
+        crowdSource.loop = true;
+        crowdSource.Play();
     }
+
 
     public void PlayVictoryMusic()
     {
-        StartCoroutine(CrossfadeMusic(victoryMusic, 2f));
+        chaosStarted = true; // lock chaos out during win sequence
+
+        // Stop parade / chaos crowd sounds
         crowdSource.Stop();
+
+        // Immediately stop current music so victory track is clean
+        musicSource.Stop();
+        musicSource.volume = 1f; // reset volume before starting fade
+
+        // Start victory music
+        StartCoroutine(CrossfadeMusic(victoryMusic, 2f));
     }
+
 
     public void PlayRandomVoiceLine()
     {

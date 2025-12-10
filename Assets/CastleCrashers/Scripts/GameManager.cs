@@ -6,8 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [Header("UI")]
-    public VictoryPanel victoryUI;
 
     [Header("References")]
     public GameObject floatingPopupPrefab;
@@ -23,6 +21,8 @@ public class GameManager : MonoBehaviour
     [Header("Score System")]
     public int currentScore = 0;
     public int highScore = 0;
+
+    public VictoryPanel victoryPanel;
 
     private void Awake()
     {
@@ -62,7 +62,6 @@ public class GameManager : MonoBehaviour
         if (!castleBlocks.Contains(block))
         {
             castleBlocks.Add(block);
-            totalBlocks = castleBlocks.Count;
         }
     }
 
@@ -74,7 +73,7 @@ public class GameManager : MonoBehaviour
             destroyedBlocks = totalBlocks - castleBlocks.Count;
 
             float percent = (float)destroyedBlocks / totalBlocks;
-            soundManager.UpdateBattleIntensity(percent);
+            soundManager.TriggerChaosMode();
 
             if (castleBlocks.Count == 0)
                 OnVictory();
@@ -85,7 +84,7 @@ public class GameManager : MonoBehaviour
     {
         destroyedBlocks++;
 
-        soundManager.UpdateBattleIntensity((float)destroyedBlocks / totalBlocks);
+        soundManager.TriggerChaosMode();
 
         if (destroyedBlocks >= totalBlocks)
             OnVictory();
@@ -103,22 +102,17 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.Save();
         }
 
-        // Position floating popup 3 meters in front of player
-        Vector3 popupPos =
-            Camera.main.transform.position +
-            Camera.main.transform.forward * 3f +
-            Vector3.up * 1.5f;
-
-        ShowFloatingPopup(
+        string msg =
             $"<b><color=yellow>CASTLE DESTROYED!</color></b>\n" +
             $"Time: {completionTime:F1}s\n" +
             $"Score: {currentScore}\n" +
-            $"High Score: {highScore}",
-            popupPos
-        );
+            $"High Score: {highScore}";
+
+        victoryPanel.ShowMessage(msg);
 
         soundManager.PlayVictoryMusic();
     }
+
 
     public void ShowFloatingPopup(string message, Vector3 position)
     {
