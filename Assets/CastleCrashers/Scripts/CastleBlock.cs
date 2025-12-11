@@ -23,7 +23,7 @@ public class CastleBlock : MonoBehaviour, IDamageable
     private bool isOnFire = false;
     private bool isDead = false;
 
-    ParticleSystem spawnedFireParticles;
+    //ParticleSystem spawnedFireParticles;
     ParticleSystem spawnedDamageParticles;
     AudioSource spawnedSound;
 
@@ -35,7 +35,7 @@ public class CastleBlock : MonoBehaviour, IDamageable
 
     private void Awake()
     {
-        spawnedFireParticles = Instantiate(fireParticles, transform.position + (transform.up*5), transform.rotation, transform);
+        //spawnedFireParticles = Instantiate(fireParticles, transform.position + (transform.up*5), transform.rotation, transform);
         spawnedDamageParticles = Instantiate(damageParticles, transform.position, transform.rotation, transform);
 
         spawnedSound = Instantiate(audioSource, transform.position, transform.rotation, transform);
@@ -65,7 +65,7 @@ public class CastleBlock : MonoBehaviour, IDamageable
         if (isFireDamage && !isOnFire)
         {
             isOnFire = true;
-            spawnedFireParticles.Play();
+            //spawnedFireParticles.Play();
             spawnedSound.Play();
             StartCoroutine(FireDamage());
         }
@@ -111,7 +111,7 @@ public class CastleBlock : MonoBehaviour, IDamageable
             yield return new WaitForSeconds(fireDamageRate);
         }
 
-        spawnedFireParticles.Stop();
+        //spawnedFireParticles.Stop();
         spawnedSound.Stop();
     }
 }
